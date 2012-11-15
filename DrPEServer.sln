@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrPEServerService", "DrPEServerService\DrPEServerService.csproj", "{92309232-6799-44CD-B252-84A5078E2EDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrPEServerEntities", "DrPEServerEntities\DrPEServerEntities.csproj", "{8A75ADA8-0ADF-4991-9C7B-FCB53102D918}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrPEServerLogic", "DrPEServerLogic\DrPEServerLogic.csproj", "{85FCAC92-F446-41B3-AE22-2D87ED0DFF21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrPEServerDAL", "DrPEServerDAL\DrPEServerDAL.csproj", "{23F5C9B1-4B50-4D65-A159-A0E0F9C38BF5}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DrPEServerWeb", "DrPEServerWeb\", "{67DA1713-7E61-46AB-81FF-629F525205D1}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{92309232-6799-44CD-B252-84A5078E2EDF}|DrPEServerService.dll;{8A75ADA8-0ADF-4991-9C7B-FCB53102D918}|DrPEServerEntities.dll;{85FCAC92-F446-41B3-AE22-2D87ED0DFF21}|DrPEServerLogic.dll;{23F5C9B1-4B50-4D65-A159-A0E0F9C38BF5}|DrPEServerDAL.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/DrPEServerWeb"
+		Debug.AspNetCompiler.PhysicalPath = "DrPEServerWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\DrPEServerWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/DrPEServerWeb"
+		Release.AspNetCompiler.PhysicalPath = "DrPEServerWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\DrPEServerWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54138"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HostIIS", "HostIIS", "{90FBE236-7C99-4973-9DF8-61F7F1E64D97}"
+	ProjectSection(SolutionItems) = preProject
+		HostIIS\OpenAccessService.svc = HostIIS\OpenAccessService.svc
+		HostIIS\UserService.svc = HostIIS\UserService.svc
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bin", "bin", "{CF219897-702A-42EC-983C-C9EDCC40B871}"
+	ProjectSection(SolutionItems) = preProject
+		HostIIS\bin\DrPEServerDAL.dll = HostIIS\bin\DrPEServerDAL.dll
+		HostIIS\bin\DrPEServerEntities.dll = HostIIS\bin\DrPEServerEntities.dll
+		HostIIS\bin\DrPEServerLogic.dll = HostIIS\bin\DrPEServerLogic.dll
+		HostIIS\bin\DrPEServerService.dll = HostIIS\bin\DrPEServerService.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92309232-6799-44CD-B252-84A5078E2EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92309232-6799-44CD-B252-84A5078E2EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92309232-6799-44CD-B252-84A5078E2EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92309232-6799-44CD-B252-84A5078E2EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A75ADA8-0ADF-4991-9C7B-FCB53102D918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A75ADA8-0ADF-4991-9C7B-FCB53102D918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A75ADA8-0ADF-4991-9C7B-FCB53102D918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A75ADA8-0ADF-4991-9C7B-FCB53102D918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85FCAC92-F446-41B3-AE22-2D87ED0DFF21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85FCAC92-F446-41B3-AE22-2D87ED0DFF21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85FCAC92-F446-41B3-AE22-2D87ED0DFF21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85FCAC92-F446-41B3-AE22-2D87ED0DFF21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23F5C9B1-4B50-4D65-A159-A0E0F9C38BF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23F5C9B1-4B50-4D65-A159-A0E0F9C38BF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23F5C9B1-4B50-4D65-A159-A0E0F9C38BF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23F5C9B1-4B50-4D65-A159-A0E0F9C38BF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67DA1713-7E61-46AB-81FF-629F525205D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67DA1713-7E61-46AB-81FF-629F525205D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67DA1713-7E61-46AB-81FF-629F525205D1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{67DA1713-7E61-46AB-81FF-629F525205D1}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF219897-702A-42EC-983C-C9EDCC40B871} = {90FBE236-7C99-4973-9DF8-61F7F1E64D97}
+	EndGlobalSection
+EndGlobal

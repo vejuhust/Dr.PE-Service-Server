@@ -1,0 +1,10 @@
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\bin\Release\DrPEServerLogic.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\bin\Release\DrPEServerLogic.pdb
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\bin\Release\DrPEServerDAL.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\bin\Release\DrPEServerEntities.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\bin\Release\ThoughtWorks.QRCode.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\bin\Release\DrPEServerDAL.pdb
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\bin\Release\DrPEServerEntities.pdb
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\obj\Release\DrPEServerLogic.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\obj\Release\DrPEServerLogic.pdb

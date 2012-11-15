@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DrPEDatabaseModelStoreContainer" CdmEntityContainer="DrPEDatabaseEntities">
+    <EntitySetMapping Name="Analysts">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.Analyst">
+        <MappingFragment StoreEntitySet="Analyst">
+          <ScalarProperty Name="AnalystID" ColumnName="AnalystID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="HospitalID" ColumnName="HospitalID" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Appointments">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.Appointment">
+        <MappingFragment StoreEntitySet="Appointment">
+          <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CaseHistories">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.CaseHistory">
+        <MappingFragment StoreEntitySet="CaseHistory">
+          <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="ExaminationID" ColumnName="ExaminationID" />
+          <ScalarProperty Name="ChiefComplaint" ColumnName="ChiefComplaint" />
+          <ScalarProperty Name="TentativeDiagnosis" ColumnName="TentativeDiagnosis" />
+          <ScalarProperty Name="DifferentialDiagnosis" ColumnName="DifferentialDiagnosis" />
+          <ScalarProperty Name="PrescriptionID" ColumnName="PrescriptionID" />
+          <ScalarProperty Name="TreatmentPlan" ColumnName="TreatmentPlan" />
+          <ScalarProperty Name="CountercheckDate" ColumnName="CountercheckDate" />
+          <ScalarProperty Name="PermitHospital" ColumnName="PermitHospital" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Diseases">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.Disease">
+        <MappingFragment StoreEntitySet="Disease">
+          <ScalarProperty Name="DiseaseID" ColumnName="DiseaseID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Notice" ColumnName="Notice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doctors">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.Doctor">
+        <MappingFragment StoreEntitySet="Doctor">
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Resume" ColumnName="Resume" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="Vocation" ColumnName="Vocation" />
+          <ScalarProperty Name="Portrait" ColumnName="Portrait" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Examinations">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.Examination">
+        <MappingFragment StoreEntitySet="Examination">
+          <ScalarProperty Name="ExaminationID" ColumnName="ExaminationID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Advice" ColumnName="Advice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hospitals">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.Hospital">
+        <MappingFragment StoreEntitySet="Hospital">
+          <ScalarProperty Name="HospitalID" ColumnName="HospitalID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Features" ColumnName="Features" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Bed" ColumnName="Bed" />
+          <ScalarProperty Name="RegistrationBalance" ColumnName="RegistrationBalance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Masters">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.Master">
+        <MappingFragment StoreEntitySet="Master">
+          <ScalarProperty Name="MasterID" ColumnName="MasterID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Messages">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.Message">
+        <MappingFragment StoreEntitySet="Message">
+          <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Receiver" ColumnName="Receiver" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pharmacies">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.Pharmacy">
+        <MappingFragment StoreEntitySet="Pharmacy">
+          <ScalarProperty Name="PharmacyID" ColumnName="PharmacyID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="HospitalID" ColumnName="HospitalID" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PharmacyDatabases">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.PharmacyDatabase">
+        <MappingFragment StoreEntitySet="PharmacyDatabase">
+          <ScalarProperty Name="PharmacyID" ColumnName="PharmacyID" />
+          <ScalarProperty Name="PhysicID" ColumnName="PhysicID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Physics">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.Physic">
+        <MappingFragment StoreEntitySet="Physic">
+          <ScalarProperty Name="PhysicID" ColumnName="PhysicID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="Notice" ColumnName="Notice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prescriptions">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.Prescription">
+        <MappingFragment StoreEntitySet="Prescription">
+          <ScalarProperty Name="PrescriptionID" ColumnName="PrescriptionID" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedules">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.Schedule">
+        <MappingFragment StoreEntitySet="Schedule">
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="Weekday" ColumnName="Weekday" />
+          <ScalarProperty Name="Addition" ColumnName="Addition" />
+          <ScalarProperty Name="Exception" ColumnName="Exception" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="LastCheck" ColumnName="LastCheck" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sections">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.Section">
+        <MappingFragment StoreEntitySet="Section">
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="HospitalID" ColumnName="HospitalID" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transactions">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.Transaction">
+        <MappingFragment StoreEntitySet="Transaction">
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="PharmacyID" ColumnName="PharmacyID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="ABO" ColumnName="ABO" />
+          <ScalarProperty Name="Rh" ColumnName="Rh" />
+          <ScalarProperty Name="Birthplace" ColumnName="Birthplace" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Deathplace" ColumnName="Deathplace" />
+          <ScalarProperty Name="Deathday" ColumnName="Deathday" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PayPassword" ColumnName="PayPassword" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmergencyContactPerson" ColumnName="EmergencyContactPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VerandaLonelies">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.VerandaLonely">
+        <MappingFragment StoreEntitySet="VerandaLonely">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WareSenses">
+      <EntityTypeMapping TypeName="DrPEDatabaseModel.WareSense">
+        <MappingFragment StoreEntitySet="WareSense">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DiseaseID" ColumnName="DiseaseID" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

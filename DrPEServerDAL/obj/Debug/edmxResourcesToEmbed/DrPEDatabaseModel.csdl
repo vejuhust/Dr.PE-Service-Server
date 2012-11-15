@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DrPEDatabaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="DrPEDatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Analysts" EntityType="DrPEDatabaseModel.Analyst" />
+    <EntitySet Name="Appointments" EntityType="DrPEDatabaseModel.Appointment" />
+    <EntitySet Name="CaseHistories" EntityType="DrPEDatabaseModel.CaseHistory" />
+    <EntitySet Name="Diseases" EntityType="DrPEDatabaseModel.Disease" />
+    <EntitySet Name="Doctors" EntityType="DrPEDatabaseModel.Doctor" />
+    <EntitySet Name="Examinations" EntityType="DrPEDatabaseModel.Examination" />
+    <EntitySet Name="Hospitals" EntityType="DrPEDatabaseModel.Hospital" />
+    <EntitySet Name="Masters" EntityType="DrPEDatabaseModel.Master" />
+    <EntitySet Name="Messages" EntityType="DrPEDatabaseModel.Message" />
+    <EntitySet Name="Pharmacies" EntityType="DrPEDatabaseModel.Pharmacy" />
+    <EntitySet Name="PharmacyDatabases" EntityType="DrPEDatabaseModel.PharmacyDatabase" />
+    <EntitySet Name="Physics" EntityType="DrPEDatabaseModel.Physic" />
+    <EntitySet Name="Prescriptions" EntityType="DrPEDatabaseModel.Prescription" />
+    <EntitySet Name="Schedules" EntityType="DrPEDatabaseModel.Schedule" />
+    <EntitySet Name="Sections" EntityType="DrPEDatabaseModel.Section" />
+    <EntitySet Name="Transactions" EntityType="DrPEDatabaseModel.Transaction" />
+    <EntitySet Name="Users" EntityType="DrPEDatabaseModel.User" />
+    <AssociationSet Name="FK_Analyst_Hospital" Association="DrPEDatabaseModel.FK_Analyst_Hospital">
+      <End Role="Hospital" EntitySet="Hospitals" />
+      <End Role="Analyst" EntitySet="Analysts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Appointment_Doctor" Association="DrPEDatabaseModel.FK_Appointment_Doctor">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Appointment_User" Association="DrPEDatabaseModel.FK_Appointment_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaseHistory_Doctor" Association="DrPEDatabaseModel.FK_CaseHistory_Doctor">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="CaseHistory" EntitySet="CaseHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaseHistory_Examination" Association="DrPEDatabaseModel.FK_CaseHistory_Examination">
+      <End Role="Examination" EntitySet="Examinations" />
+      <End Role="CaseHistory" EntitySet="CaseHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaseHistory_Hospital" Association="DrPEDatabaseModel.FK_CaseHistory_Hospital">
+      <End Role="Hospital" EntitySet="Hospitals" />
+      <End Role="CaseHistory" EntitySet="CaseHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaseHistory_Prescription" Association="DrPEDatabaseModel.FK_CaseHistory_Prescription">
+      <End Role="Prescription" EntitySet="Prescriptions" />
+      <End Role="CaseHistory" EntitySet="CaseHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaseHistory_Section" Association="DrPEDatabaseModel.FK_CaseHistory_Section">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="CaseHistory" EntitySet="CaseHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaseHistory_User" Association="DrPEDatabaseModel.FK_CaseHistory_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="CaseHistory" EntitySet="CaseHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doctor_Section" Association="DrPEDatabaseModel.FK_Doctor_Section">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="Doctor" EntitySet="Doctors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doctor_User" Association="DrPEDatabaseModel.FK_Doctor_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Doctor" EntitySet="Doctors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_Doctor" Association="DrPEDatabaseModel.FK_Schedule_Doctor">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="Schedule" EntitySet="Schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pharmacy_Hospital" Association="DrPEDatabaseModel.FK_Pharmacy_Hospital">
+      <End Role="Hospital" EntitySet="Hospitals" />
+      <End Role="Pharmacy" EntitySet="Pharmacies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Section_Hospital" Association="DrPEDatabaseModel.FK_Section_Hospital">
+      <End Role="Hospital" EntitySet="Hospitals" />
+      <End Role="Section" EntitySet="Sections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PharmacyDatabase_Pharmacy" Association="DrPEDatabaseModel.FK_PharmacyDatabase_Pharmacy">
+      <End Role="Pharmacy" EntitySet="Pharmacies" />
+      <End Role="PharmacyDatabase" EntitySet="PharmacyDatabases" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaction_Pharmacy" Association="DrPEDatabaseModel.FK_Transaction_Pharmacy">
+      <End Role="Pharmacy" EntitySet="Pharmacies" />
+      <End Role="Transaction" EntitySet="Transactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PharmacyDatabase_Physic" Association="DrPEDatabaseModel.FK_PharmacyDatabase_Physic">
+      <End Role="Physic" EntitySet="Physics" />
+      <End Role="PharmacyDatabase" EntitySet="PharmacyDatabases" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaction_User" Association="DrPEDatabaseModel.FK_Transaction_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Transaction" EntitySet="Transactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_User1" Association="DrPEDatabaseModel.FK_User_User1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="User1" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Analyst">
+    <Key>
+      <PropertyRef Name="AnalystID" />
+    </Key>
+    <Property Name="AnalystID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="HospitalID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="LastLoginDate" Type="DateTime" />
+    <NavigationProperty Name="Hospital" Relationship="DrPEDatabaseModel.FK_Analyst_Hospital" FromRole="Analyst" ToRole="Hospital" />
+  </EntityType>
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="AppointmentID" />
+    </Key>
+    <Property Name="AppointmentID" Type="Guid" Nullable="false" />
+    <Property Name="DoctorID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" />
+    <Property Name="Status" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Doctor" Relationship="DrPEDatabaseModel.FK_Appointment_Doctor" FromRole="Appointment" ToRole="Doctor" />
+    <NavigationProperty Name="User" Relationship="DrPEDatabaseModel.FK_Appointment_User" FromRole="Appointment" ToRole="User" />
+  </EntityType>
+  <EntityType Name="CaseHistory">
+    <Key>
+      <PropertyRef Name="CaseID" />
+    </Key>
+    <Property Name="CaseID" Type="Guid" Nullable="false" />
+    <Property Name="UserID" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="DoctorID" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="ModifiedDate" Type="DateTime" />
+    <Property Name="SectionID" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="ExaminationID" Type="Guid" />
+    <Property Name="ChiefComplaint" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TentativeDiagnosis" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="DifferentialDiagnosis" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PrescriptionID" Type="Guid" />
+    <Property Name="TreatmentPlan" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CountercheckDate" Type="DateTime" />
+    <Property Name="PermitHospital" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Doctor" Relationship="DrPEDatabaseModel.FK_CaseHistory_Doctor" FromRole="CaseHistory" ToRole="Doctor" />
+    <NavigationProperty Name="Examination" Relationship="DrPEDatabaseModel.FK_CaseHistory_Examination" FromRole="CaseHistory" ToRole="Examination" />
+    <NavigationProperty Name="Hospital" Relationship="DrPEDatabaseModel.FK_CaseHistory_Hospital" FromRole="CaseHistory" ToRole="Hospital" />
+    <NavigationProperty Name="Prescription" Relationship="DrPEDatabaseModel.FK_CaseHistory_Prescription" FromRole="CaseHistory" ToRole="Prescription" />
+    <NavigationProperty Name="Section" Relationship="DrPEDatabaseModel.FK_CaseHistory_Section" FromRole="CaseHistory" ToRole="Section" />
+    <NavigationProperty Name="User" Relationship="DrPEDatabaseModel.FK_CaseHistory_User" FromRole="CaseHistory" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Disease">
+    <Key>
+      <PropertyRef Name="DiseaseID" />
+    </Key>
+    <Property Name="DiseaseID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Notice" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Doctor">
+    <Key>
+      <PropertyRef Name="DoctorID" />
+    </Key>
+    <Property Name="DoctorID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="UserID" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Designation" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Resume" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SectionID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="LastLoginDate" Type="DateTime" />
+    <Property Name="Vocation" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Portrait" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Appointments" Relationship="DrPEDatabaseModel.FK_Appointment_Doctor" FromRole="Doctor" ToRole="Appointment" />
+    <NavigationProperty Name="CaseHistories" Relationship="DrPEDatabaseModel.FK_CaseHistory_Doctor" FromRole="Doctor" ToRole="CaseHistory" />
+    <NavigationProperty Name="Section" Relationship="DrPEDatabaseModel.FK_Doctor_Section" FromRole="Doctor" ToRole="Section" />
+    <NavigationProperty Name="User" Relationship="DrPEDatabaseModel.FK_Doctor_User" FromRole="Doctor" ToRole="User" />
+    <NavigationProperty Name="Schedule" Relationship="DrPEDatabaseModel.FK_Schedule_Doctor" FromRole="Doctor" ToRole="Schedule" />
+  </EntityType>
+  <EntityType Name="Examination">
+    <Key>
+      <PropertyRef Name="ExaminationID" />
+    </Key>
+    <Property Name="ExaminationID" Type="Guid" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" />
+    <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Advice" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="CaseHistories" Relationship="DrPEDatabaseModel.FK_CaseHistory_Examination" FromRole="Examination" ToRole="CaseHistory" />
+  </EntityType>
+  <EntityType Name="Hospital">
+    <Key>
+      <PropertyRef Name="HospitalID" />
+    </Key>
+    <Property Name="HospitalID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Latitude" Type="Double" />
+    <Property Name="Longitude" Type="Double" />
+    <Property Name="Type" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Grade" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Features" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Website" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Bed" Type="Int32" />
+    <Property Name="RegistrationBalance" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Analysts" Relationship="DrPEDatabaseModel.FK_Analyst_Hospital" FromRole="Hospital" ToRole="Analyst" />
+    <NavigationProperty Name="CaseHistories" Relationship="DrPEDatabaseModel.FK_CaseHistory_Hospital" FromRole="Hospital" ToRole="CaseHistory" />
+    <NavigationProperty Name="Pharmacies" Relationship="DrPEDatabaseModel.FK_Pharmacy_Hospital" FromRole="Hospital" ToRole="Pharmacy" />
+    <NavigationProperty Name="Sections" Relationship="DrPEDatabaseModel.FK_Section_Hospital" FromRole="Hospital" ToRole="Section" />
+  </EntityType>
+  <EntityType Name="Master">
+    <Key>
+      <PropertyRef Name="MasterID" />
+    </Key>
+    <Property Name="MasterID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="LastLoginDate" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="MessageID" />
+    </Key>
+    <Property Name="MessageID" Type="Guid" Nullable="false" />
+    <Property Name="Sender" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Receiver" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" />
+    <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Pharmacy">
+    <Key>
+      <PropertyRef Name="PharmacyID" />
+    </Key>
+    <Property Name="PharmacyID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Latitude" Type="Double" />
+    <Property Name="Longitude" Type="Double" />
+    <Property Name="HospitalID" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="LastLoginDate" Type="DateTime" />
+    <Property Name="Balance" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Hospital" Relationship="DrPEDatabaseModel.FK_Pharmacy_Hospital" FromRole="Pharmacy" ToRole="Hospital" />
+    <NavigationProperty Name="PharmacyDatabases" Relationship="DrPEDatabaseModel.FK_PharmacyDatabase_Pharmacy" FromRole="Pharmacy" ToRole="PharmacyDatabase" />
+    <NavigationProperty Name="Transactions" Relationship="DrPEDatabaseModel.FK_Transaction_Pharmacy" FromRole="Pharmacy" ToRole="Transaction" />
+  </EntityType>
+  <EntityType Name="PharmacyDatabase">
+    <Key>
+      <PropertyRef Name="PharmacyID" />
+      <PropertyRef Name="PhysicID" />
+    </Key>
+    <Property Name="PharmacyID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="PhysicID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Pharmacy" Relationship="DrPEDatabaseModel.FK_PharmacyDatabase_Pharmacy" FromRole="PharmacyDatabase" ToRole="Pharmacy" />
+    <NavigationProperty Name="Physic" Relationship="DrPEDatabaseModel.FK_PharmacyDatabase_Physic" FromRole="PharmacyDatabase" ToRole="Physic" />
+  </EntityType>
+  <EntityType Name="Physic">
+    <Key>
+      <PropertyRef Name="PhysicID" />
+    </Key>
+    <Property Name="PhysicID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Method" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Notice" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="PharmacyDatabases" Relationship="DrPEDatabaseModel.FK_PharmacyDatabase_Physic" FromRole="Physic" ToRole="PharmacyDatabase" />
+  </EntityType>
+  <EntityType Name="Prescription">
+    <Key>
+      <PropertyRef Name="PrescriptionID" />
+    </Key>
+    <Property Name="PrescriptionID" Type="Guid" Nullable="false" />
+    <Property Name="Detail" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="CaseHistories" Relationship="DrPEDatabaseModel.FK_CaseHistory_Prescription" FromRole="Prescription" ToRole="CaseHistory" />
+  </EntityType>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="DoctorID" />
+    </Key>
+    <Property Name="DoctorID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Weekday" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Addition" Type="DateTime" />
+    <Property Name="Exception" Type="DateTime" />
+    <Property Name="Capacity" Type="Int32" />
+    <Property Name="LastCheck" Type="DateTime" />
+    <NavigationProperty Name="Doctor" Relationship="DrPEDatabaseModel.FK_Schedule_Doctor" FromRole="Schedule" ToRole="Doctor" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="SectionID" />
+    </Key>
+    <Property Name="SectionID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="HospitalID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Place" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="CaseHistories" Relationship="DrPEDatabaseModel.FK_CaseHistory_Section" FromRole="Section" ToRole="CaseHistory" />
+    <NavigationProperty Name="Doctors" Relationship="DrPEDatabaseModel.FK_Doctor_Section" FromRole="Section" ToRole="Doctor" />
+    <NavigationProperty Name="Hospital" Relationship="DrPEDatabaseModel.FK_Section_Hospital" FromRole="Section" ToRole="Hospital" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+    </Key>
+    <Property Name="TransactionID" Type="Guid" Nullable="false" />
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="PharmacyID" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Status" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Detail" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Pharmacy" Relationship="DrPEDatabaseModel.FK_Transaction_Pharmacy" FromRole="Transaction" ToRole="Pharmacy" />
+    <NavigationProperty Name="User" Relationship="DrPEDatabaseModel.FK_Transaction_User" FromRole="Transaction" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Nationality" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Gender" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ABO" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Rh" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Birthplace" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Birthday" Type="DateTime" />
+    <Property Name="Deathplace" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Deathday" Type="DateTime" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="PayPassword" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Balance" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LastLoginDate" Type="DateTime" />
+    <Property Name="City" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EmergencyContactPerson" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Appointments" Relationship="DrPEDatabaseModel.FK_Appointment_User" FromRole="User" ToRole="Appointment" />
+    <NavigationProperty Name="CaseHistories" Relationship="DrPEDatabaseModel.FK_CaseHistory_User" FromRole="User" ToRole="CaseHistory" />
+    <NavigationProperty Name="Doctors" Relationship="DrPEDatabaseModel.FK_Doctor_User" FromRole="User" ToRole="Doctor" />
+    <NavigationProperty Name="Transactions" Relationship="DrPEDatabaseModel.FK_Transaction_User" FromRole="User" ToRole="Transaction" />
+    <NavigationProperty Name="User1" Relationship="DrPEDatabaseModel.FK_User_User1" FromRole="User" ToRole="User1" />
+    <NavigationProperty Name="User2" Relationship="DrPEDatabaseModel.FK_User_User1" FromRole="User1" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_Analyst_Hospital">
+    <End Role="Hospital" Type="DrPEDatabaseModel.Hospital" Multiplicity="1" />
+    <End Role="Analyst" Type="DrPEDatabaseModel.Analyst" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospital">
+        <PropertyRef Name="HospitalID" />
+      </Principal>
+      <Dependent Role="Analyst">
+        <PropertyRef Name="HospitalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Appointment_Doctor">
+    <End Role="Doctor" Type="DrPEDatabaseModel.Doctor" Multiplicity="1" />
+    <End Role="Appointment" Type="DrPEDatabaseModel.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorID" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Appointment_User">
+    <End Role="User" Type="DrPEDatabaseModel.User" Multiplicity="1" />
+    <End Role="Appointment" Type="DrPEDatabaseModel.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaseHistory_Doctor">
+    <End Role="Doctor" Type="DrPEDatabaseModel.Doctor" Multiplicity="0..1" />
+    <End Role="CaseHistory" Type="DrPEDatabaseModel.CaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorID" />
+      </Principal>
+      <Dependent Role="CaseHistory">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaseHistory_Examination">
+    <End Role="Examination" Type="DrPEDatabaseModel.Examination" Multiplicity="0..1" />
+    <End Role="CaseHistory" Type="DrPEDatabaseModel.CaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Examination">
+        <PropertyRef Name="ExaminationID" />
+      </Principal>
+      <Dependent Role="CaseHistory">
+        <PropertyRef Name="ExaminationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaseHistory_Hospital">
+    <End Role="Hospital" Type="DrPEDatabaseModel.Hospital" Multiplicity="0..1" />
+    <End Role="CaseHistory" Type="DrPEDatabaseModel.CaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospital">
+        <PropertyRef Name="HospitalID" />
+      </Principal>
+      <Dependent Role="CaseHistory">
+        <PropertyRef Name="PermitHospital" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaseHistory_Prescription">
+    <End Role="Prescription" Type="DrPEDatabaseModel.Prescription" Multiplicity="0..1" />
+    <End Role="CaseHistory" Type="DrPEDatabaseModel.CaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Prescription">
+        <PropertyRef Name="PrescriptionID" />
+      </Principal>
+      <Dependent Role="CaseHistory">
+        <PropertyRef Name="PrescriptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaseHistory_Section">
+    <End Role="Section" Type="DrPEDatabaseModel.Section" Multiplicity="0..1" />
+    <End Role="CaseHistory" Type="DrPEDatabaseModel.CaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="SectionID" />
+      </Principal>
+      <Dependent Role="CaseHistory">
+        <PropertyRef Name="SectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaseHistory_User">
+    <End Role="User" Type="DrPEDatabaseModel.User" Multiplicity="0..1" />
+    <End Role="CaseHistory" Type="DrPEDatabaseModel.CaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="CaseHistory">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doctor_Section">
+    <End Role="Section" Type="DrPEDatabaseModel.Section" Multiplicity="1" />
+    <End Role="Doctor" Type="DrPEDatabaseModel.Doctor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="SectionID" />
+      </Principal>
+      <Dependent Role="Doctor">
+        <PropertyRef Name="SectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doctor_User">
+    <End Role="User" Type="DrPEDatabaseModel.User" Multiplicity="0..1" />
+    <End Role="Doctor" Type="DrPEDatabaseModel.Doctor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Doctor">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_Doctor">
+    <End Role="Doctor" Type="DrPEDatabaseModel.Doctor" Multiplicity="1" />
+    <End Role="Schedule" Type="DrPEDatabaseModel.Schedule" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorID" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pharmacy_Hospital">
+    <End Role="Hospital" Type="DrPEDatabaseModel.Hospital" Multiplicity="0..1" />
+    <End Role="Pharmacy" Type="DrPEDatabaseModel.Pharmacy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospital">
+        <PropertyRef Name="HospitalID" />
+      </Principal>
+      <Dependent Role="Pharmacy">
+        <PropertyRef Name="HospitalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Section_Hospital">
+    <End Role="Hospital" Type="DrPEDatabaseModel.Hospital" Multiplicity="1" />
+    <End Role="Section" Type="DrPEDatabaseModel.Section" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospital">
+        <PropertyRef Name="HospitalID" />
+      </Principal>
+      <Dependent Role="Section">
+        <PropertyRef Name="HospitalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PharmacyDatabase_Pharmacy">
+    <End Role="Pharmacy" Type="DrPEDatabaseModel.Pharmacy" Multiplicity="1" />
+    <End Role="PharmacyDatabase" Type="DrPEDatabaseModel.PharmacyDatabase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pharmacy">
+        <PropertyRef Name="PharmacyID" />
+      </Principal>
+      <Dependent Role="PharmacyDatabase">
+        <PropertyRef Name="PharmacyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaction_Pharmacy">
+    <End Role="Pharmacy" Type="DrPEDatabaseModel.Pharmacy" Multiplicity="0..1" />
+    <End Role="Transaction" Type="DrPEDatabaseModel.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pharmacy">
+        <PropertyRef Name="PharmacyID" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="PharmacyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PharmacyDatabase_Physic">
+    <End Role="Physic" Type="DrPEDatabaseModel.Physic" Multiplicity="1" />
+    <End Role="PharmacyDatabase" Type="DrPEDatabaseModel.PharmacyDatabase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Physic">
+        <PropertyRef Name="PhysicID" />
+      </Principal>
+      <Dependent Role="PharmacyDatabase">
+        <PropertyRef Name="PhysicID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaction_User">
+    <End Role="User" Type="DrPEDatabaseModel.User" Multiplicity="1" />
+    <End Role="Transaction" Type="DrPEDatabaseModel.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_User1">
+    <End Role="User" Type="DrPEDatabaseModel.User" Multiplicity="0..1" />
+    <End Role="User1" Type="DrPEDatabaseModel.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="EmergencyContactPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

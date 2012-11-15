@@ -1,0 +1,9 @@
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\bin\Debug\DrPEServerLogic.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\bin\Debug\DrPEServerLogic.pdb
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\bin\Debug\DrPEServerDAL.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\bin\Debug\DrPEServerEntities.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\bin\Debug\DrPEServerDAL.pdb
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\bin\Debug\DrPEServerEntities.pdb
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\obj\Debug\DrPEServerLogic.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerLogic\obj\Debug\DrPEServerLogic.pdb

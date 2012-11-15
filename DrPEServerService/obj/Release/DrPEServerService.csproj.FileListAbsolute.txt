@@ -1,0 +1,13 @@
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerService\bin\Release\DrPEServerService.dll.config
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerService\bin\Release\DrPEServerService.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerService\bin\Release\DrPEServerService.pdb
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerService\bin\Release\DrPEServerEntities.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerService\bin\Release\DrPEServerLogic.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerService\bin\Release\DrPEServerDAL.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerService\bin\Release\ThoughtWorks.QRCode.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerService\bin\Release\DrPEServerEntities.pdb
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerService\bin\Release\DrPEServerLogic.pdb
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerService\bin\Release\DrPEServerDAL.pdb
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerService\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerService\obj\Release\DrPEServerService.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerService\obj\Release\DrPEServerService.pdb

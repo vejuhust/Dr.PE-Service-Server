@@ -1,0 +1,5 @@
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerEntities\bin\Release\DrPEServerEntities.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerEntities\bin\Release\DrPEServerEntities.pdb
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerEntities\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerEntities\obj\Release\DrPEServerEntities.dll
+C:\Users\Vej\documents\visual studio 2010\Projects\DrPEServer\DrPEServerEntities\obj\Release\DrPEServerEntities.pdb

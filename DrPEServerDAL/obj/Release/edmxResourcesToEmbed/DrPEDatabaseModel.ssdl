@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DrPEDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DrPEDatabaseModelStoreContainer">
+    <EntitySet Name="Analyst" EntityType="DrPEDatabaseModel.Store.Analyst" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Appointment" EntityType="DrPEDatabaseModel.Store.Appointment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CaseHistory" EntityType="DrPEDatabaseModel.Store.CaseHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Disease" EntityType="DrPEDatabaseModel.Store.Disease" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Doctor" EntityType="DrPEDatabaseModel.Store.Doctor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Examination" EntityType="DrPEDatabaseModel.Store.Examination" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Hospital" EntityType="DrPEDatabaseModel.Store.Hospital" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Master" EntityType="DrPEDatabaseModel.Store.Master" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Message" EntityType="DrPEDatabaseModel.Store.Message" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pharmacy" EntityType="DrPEDatabaseModel.Store.Pharmacy" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PharmacyDatabase" EntityType="DrPEDatabaseModel.Store.PharmacyDatabase" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Physic" EntityType="DrPEDatabaseModel.Store.Physic" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Prescription" EntityType="DrPEDatabaseModel.Store.Prescription" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Schedule" EntityType="DrPEDatabaseModel.Store.Schedule" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Section" EntityType="DrPEDatabaseModel.Store.Section" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Transaction" EntityType="DrPEDatabaseModel.Store.Transaction" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="DrPEDatabaseModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VerandaLonely" EntityType="DrPEDatabaseModel.Store.VerandaLonely" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WareSense" EntityType="DrPEDatabaseModel.Store.WareSense" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Analyst_Hospital" Association="DrPEDatabaseModel.Store.FK_Analyst_Hospital">
+      <End Role="Hospital" EntitySet="Hospital" />
+      <End Role="Analyst" EntitySet="Analyst" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Appointment_Doctor" Association="DrPEDatabaseModel.Store.FK_Appointment_Doctor">
+      <End Role="Doctor" EntitySet="Doctor" />
+      <End Role="Appointment" EntitySet="Appointment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Appointment_User" Association="DrPEDatabaseModel.Store.FK_Appointment_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Appointment" EntitySet="Appointment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaseHistory_Doctor" Association="DrPEDatabaseModel.Store.FK_CaseHistory_Doctor">
+      <End Role="Doctor" EntitySet="Doctor" />
+      <End Role="CaseHistory" EntitySet="CaseHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaseHistory_Examination" Association="DrPEDatabaseModel.Store.FK_CaseHistory_Examination">
+      <End Role="Examination" EntitySet="Examination" />
+      <End Role="CaseHistory" EntitySet="CaseHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaseHistory_Hospital" Association="DrPEDatabaseModel.Store.FK_CaseHistory_Hospital">
+      <End Role="Hospital" EntitySet="Hospital" />
+      <End Role="CaseHistory" EntitySet="CaseHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaseHistory_Prescription" Association="DrPEDatabaseModel.Store.FK_CaseHistory_Prescription">
+      <End Role="Prescription" EntitySet="Prescription" />
+      <End Role="CaseHistory" EntitySet="CaseHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaseHistory_Section" Association="DrPEDatabaseModel.Store.FK_CaseHistory_Section">
+      <End Role="Section" EntitySet="Section" />
+      <End Role="CaseHistory" EntitySet="CaseHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CaseHistory_User" Association="DrPEDatabaseModel.Store.FK_CaseHistory_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="CaseHistory" EntitySet="CaseHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doctor_Section" Association="DrPEDatabaseModel.Store.FK_Doctor_Section">
+      <End Role="Section" EntitySet="Section" />
+      <End Role="Doctor" EntitySet="Doctor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doctor_User" Association="DrPEDatabaseModel.Store.FK_Doctor_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Doctor" EntitySet="Doctor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pharmacy_Hospital" Association="DrPEDatabaseModel.Store.FK_Pharmacy_Hospital">
+      <End Role="Hospital" EntitySet="Hospital" />
+      <End Role="Pharmacy" EntitySet="Pharmacy" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PharmacyDatabase_Pharmacy" Association="DrPEDatabaseModel.Store.FK_PharmacyDatabase_Pharmacy">
+      <End Role="Pharmacy" EntitySet="Pharmacy" />
+      <End Role="PharmacyDatabase" EntitySet="PharmacyDatabase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PharmacyDatabase_Physic" Association="DrPEDatabaseModel.Store.FK_PharmacyDatabase_Physic">
+      <End Role="Physic" EntitySet="Physic" />
+      <End Role="PharmacyDatabase" EntitySet="PharmacyDatabase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_Doctor" Association="DrPEDatabaseModel.Store.FK_Schedule_Doctor">
+      <End Role="Doctor" EntitySet="Doctor" />
+      <End Role="Schedule" EntitySet="Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Section_Hospital" Association="DrPEDatabaseModel.Store.FK_Section_Hospital">
+      <End Role="Hospital" EntitySet="Hospital" />
+      <End Role="Section" EntitySet="Section" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaction_Pharmacy" Association="DrPEDatabaseModel.Store.FK_Transaction_Pharmacy">
+      <End Role="Pharmacy" EntitySet="Pharmacy" />
+      <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaction_User" Association="DrPEDatabaseModel.Store.FK_Transaction_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_User1" Association="DrPEDatabaseModel.Store.FK_User_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="User1" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VerandaLonely_Section" Association="DrPEDatabaseModel.Store.FK_VerandaLonely_Section">
+      <End Role="Section" EntitySet="Section" />
+      <End Role="VerandaLonely" EntitySet="VerandaLonely" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WareSense_Disease" Association="DrPEDatabaseModel.Store.FK_WareSense_Disease">
+      <End Role="Disease" EntitySet="Disease" />
+      <End Role="WareSense" EntitySet="WareSense" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Analyst">
+    <Key>
+      <PropertyRef Name="AnalystID" />
+    </Key>
+    <Property Name="AnalystID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="HospitalID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="LastLoginDate" Type="datetime2" />
+  </EntityType>
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="AppointmentID" />
+    </Key>
+    <Property Name="AppointmentID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DoctorID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="UserID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Date" Type="datetime2" />
+    <Property Name="Rank" Type="int" />
+    <Property Name="Status" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CaseHistory">
+    <Key>
+      <PropertyRef Name="CaseID" />
+    </Key>
+    <Property Name="CaseID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="20" />
+    <Property Name="DoctorID" Type="nvarchar" MaxLength="20" />
+    <Property Name="CreatedDate" Type="datetime2" />
+    <Property Name="ModifiedDate" Type="datetime2" />
+    <Property Name="SectionID" Type="nvarchar" MaxLength="20" />
+    <Property Name="ExaminationID" Type="uniqueidentifier" />
+    <Property Name="ChiefComplaint" Type="ntext" />
+    <Property Name="TentativeDiagnosis" Type="ntext" />
+    <Property Name="DifferentialDiagnosis" Type="ntext" />
+    <Property Name="PrescriptionID" Type="uniqueidentifier" />
+    <Property Name="TreatmentPlan" Type="ntext" />
+    <Property Name="CountercheckDate" Type="datetime2" />
+    <Property Name="PermitHospital" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Disease">
+    <Key>
+      <PropertyRef Name="DiseaseID" />
+    </Key>
+    <Property Name="DiseaseID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="ntext" />
+    <Property Name="Notice" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Doctor">
+    <Key>
+      <PropertyRef Name="DoctorID" />
+    </Key>
+    <Property Name="DoctorID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="20" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="30" />
+    <Property Name="Resume" Type="ntext" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="SectionID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="LastLoginDate" Type="datetime2" />
+    <Property Name="Vocation" Type="nvarchar" MaxLength="30" />
+    <Property Name="Portrait" Type="image" />
+  </EntityType>
+  <EntityType Name="Examination">
+    <Key>
+      <PropertyRef Name="ExaminationID" />
+    </Key>
+    <Property Name="ExaminationID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="30" />
+    <Property Name="Date" Type="datetime2" />
+    <Property Name="Text" Type="ntext" />
+    <Property Name="Image" Type="image" />
+    <Property Name="Advice" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Hospital">
+    <Key>
+      <PropertyRef Name="HospitalID" />
+    </Key>
+    <Property Name="HospitalID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="City" Type="nvarchar" MaxLength="30" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="Latitude" Type="float" />
+    <Property Name="Longitude" Type="float" />
+    <Property Name="Type" Type="nvarchar" MaxLength="30" />
+    <Property Name="Grade" Type="nvarchar" MaxLength="30" />
+    <Property Name="Features" Type="ntext" />
+    <Property Name="Website" Type="nvarchar" MaxLength="100" />
+    <Property Name="Bed" Type="int" />
+    <Property Name="RegistrationBalance" Type="money" />
+  </EntityType>
+  <EntityType Name="Master">
+    <Key>
+      <PropertyRef Name="MasterID" />
+    </Key>
+    <Property Name="MasterID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="LastLoginDate" Type="datetime2" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="MessageID" />
+    </Key>
+    <Property Name="MessageID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Sender" Type="nvarchar" MaxLength="20" />
+    <Property Name="Receiver" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Type" Type="nvarchar" MaxLength="20" />
+    <Property Name="Date" Type="datetime2" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Pharmacy">
+    <Key>
+      <PropertyRef Name="PharmacyID" />
+    </Key>
+    <Property Name="PharmacyID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="City" Type="nvarchar" MaxLength="30" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="Latitude" Type="float" />
+    <Property Name="Longitude" Type="float" />
+    <Property Name="HospitalID" Type="nvarchar" MaxLength="20" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="20" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="LastLoginDate" Type="datetime2" />
+    <Property Name="Balance" Type="money" />
+  </EntityType>
+  <EntityType Name="PharmacyDatabase">
+    <Key>
+      <PropertyRef Name="PharmacyID" />
+      <PropertyRef Name="PhysicID" />
+    </Key>
+    <Property Name="PharmacyID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="PhysicID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Price" Type="money" />
+  </EntityType>
+  <EntityType Name="Physic">
+    <Key>
+      <PropertyRef Name="PhysicID" />
+    </Key>
+    <Property Name="PhysicID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="ntext" />
+    <Property Name="Method" Type="ntext" />
+    <Property Name="Notice" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Prescription">
+    <Key>
+      <PropertyRef Name="PrescriptionID" />
+    </Key>
+    <Property Name="PrescriptionID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Detail" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="DoctorID" />
+    </Key>
+    <Property Name="DoctorID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Weekday" Type="ntext" />
+    <Property Name="Addition" Type="datetime2" />
+    <Property Name="Exception" Type="datetime2" />
+    <Property Name="Capacity" Type="int" />
+    <Property Name="LastCheck" Type="datetime2" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="SectionID" />
+    </Key>
+    <Property Name="SectionID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="HospitalID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Place" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+    </Key>
+    <Property Name="TransactionID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="PharmacyID" Type="nvarchar" MaxLength="20" />
+    <Property Name="Date" Type="datetime2" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="Status" Type="nvarchar" MaxLength="100" />
+    <Property Name="Detail" Type="ntext" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Nationality" Type="nvarchar" MaxLength="30" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="30" />
+    <Property Name="ABO" Type="nvarchar" MaxLength="30" />
+    <Property Name="Rh" Type="nvarchar" MaxLength="30" />
+    <Property Name="Birthplace" Type="nvarchar" MaxLength="30" />
+    <Property Name="Birthday" Type="datetime2" />
+    <Property Name="Deathplace" Type="nvarchar" MaxLength="30" />
+    <Property Name="Deathday" Type="datetime2" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="PayPassword" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Balance" Type="money" />
+    <Property Name="LastLoginDate" Type="datetime2" />
+    <Property Name="City" Type="nvarchar" MaxLength="30" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmergencyContactPerson" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="VerandaLonely">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SectionID" Type="nvarchar" MaxLength="20" />
+    <Property Name="Title" Type="ntext" />
+    <Property Name="Image" Type="image" />
+    <Property Name="Text" Type="ntext" />
+  </EntityType>
+  <EntityType Name="WareSense">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DiseaseID" Type="nvarchar" MaxLength="20" />
+    <Property Name="Text" Type="ntext" />
+    <Property Name="URL" Type="ntext" />
+  </EntityType>
+  <Association Name="FK_Analyst_Hospital">
+    <End Role="Hospital" Type="DrPEDatabaseModel.Store.Hospital" Multiplicity="1" />
+    <End Role="Analyst" Type="DrPEDatabaseModel.Store.Analyst" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospital">
+        <PropertyRef Name="HospitalID" />
+      </Principal>
+      <Dependent Role="Analyst">
+        <PropertyRef Name="HospitalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Appointment_Doctor">
+    <End Role="Doctor" Type="DrPEDatabaseModel.Store.Doctor" Multiplicity="1" />
+    <End Role="Appointment" Type="DrPEDatabaseModel.Store.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorID" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Appointment_User">
+    <End Role="User" Type="DrPEDatabaseModel.Store.User" Multiplicity="1" />
+    <End Role="Appointment" Type="DrPEDatabaseModel.Store.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaseHistory_Doctor">
+    <End Role="Doctor" Type="DrPEDatabaseModel.Store.Doctor" Multiplicity="0..1" />
+    <End Role="CaseHistory" Type="DrPEDatabaseModel.Store.CaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorID" />
+      </Principal>
+      <Dependent Role="CaseHistory">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaseHistory_Examination">
+    <End Role="Examination" Type="DrPEDatabaseModel.Store.Examination" Multiplicity="0..1" />
+    <End Role="CaseHistory" Type="DrPEDatabaseModel.Store.CaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Examination">
+        <PropertyRef Name="ExaminationID" />
+      </Principal>
+      <Dependent Role="CaseHistory">
+        <PropertyRef Name="ExaminationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaseHistory_Hospital">
+    <End Role="Hospital" Type="DrPEDatabaseModel.Store.Hospital" Multiplicity="0..1" />
+    <End Role="CaseHistory" Type="DrPEDatabaseModel.Store.CaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospital">
+        <PropertyRef Name="HospitalID" />
+      </Principal>
+      <Dependent Role="CaseHistory">
+        <PropertyRef Name="PermitHospital" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaseHistory_Prescription">
+    <End Role="Prescription" Type="DrPEDatabaseModel.Store.Prescription" Multiplicity="0..1" />
+    <End Role="CaseHistory" Type="DrPEDatabaseModel.Store.CaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Prescription">
+        <PropertyRef Name="PrescriptionID" />
+      </Principal>
+      <Dependent Role="CaseHistory">
+        <PropertyRef Name="PrescriptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaseHistory_Section">
+    <End Role="Section" Type="DrPEDatabaseModel.Store.Section" Multiplicity="0..1" />
+    <End Role="CaseHistory" Type="DrPEDatabaseModel.Store.CaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="SectionID" />
+      </Principal>
+      <Dependent Role="CaseHistory">
+        <PropertyRef Name="SectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CaseHistory_User">
+    <End Role="User" Type="DrPEDatabaseModel.Store.User" Multiplicity="0..1" />
+    <End Role="CaseHistory" Type="DrPEDatabaseModel.Store.CaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="CaseHistory">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doctor_Section">
+    <End Role="Section" Type="DrPEDatabaseModel.Store.Section" Multiplicity="1" />
+    <End Role="Doctor" Type="DrPEDatabaseModel.Store.Doctor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="SectionID" />
+      </Principal>
+      <Dependent Role="Doctor">
+        <PropertyRef Name="SectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doctor_User">
+    <End Role="User" Type="DrPEDatabaseModel.Store.User" Multiplicity="0..1" />
+    <End Role="Doctor" Type="DrPEDatabaseModel.Store.Doctor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Doctor">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pharmacy_Hospital">
+    <End Role="Hospital" Type="DrPEDatabaseModel.Store.Hospital" Multiplicity="0..1" />
+    <End Role="Pharmacy" Type="DrPEDatabaseModel.Store.Pharmacy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospital">
+        <PropertyRef Name="HospitalID" />
+      </Principal>
+      <Dependent Role="Pharmacy">
+        <PropertyRef Name="HospitalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PharmacyDatabase_Pharmacy">
+    <End Role="Pharmacy" Type="DrPEDatabaseModel.Store.Pharmacy" Multiplicity="1" />
+    <End Role="PharmacyDatabase" Type="DrPEDatabaseModel.Store.PharmacyDatabase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pharmacy">
+        <PropertyRef Name="PharmacyID" />
+      </Principal>
+      <Dependent Role="PharmacyDatabase">
+        <PropertyRef Name="PharmacyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PharmacyDatabase_Physic">
+    <End Role="Physic" Type="DrPEDatabaseModel.Store.Physic" Multiplicity="1" />
+    <End Role="PharmacyDatabase" Type="DrPEDatabaseModel.Store.PharmacyDatabase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Physic">
+        <PropertyRef Name="PhysicID" />
+      </Principal>
+      <Dependent Role="PharmacyDatabase">
+        <PropertyRef Name="PhysicID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_Doctor">
+    <End Role="Doctor" Type="DrPEDatabaseModel.Store.Doctor" Multiplicity="1" />
+    <End Role="Schedule" Type="DrPEDatabaseModel.Store.Schedule" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorID" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Section_Hospital">
+    <End Role="Hospital" Type="DrPEDatabaseModel.Store.Hospital" Multiplicity="1" />
+    <End Role="Section" Type="DrPEDatabaseModel.Store.Section" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospital">
+        <PropertyRef Name="HospitalID" />
+      </Principal>
+      <Dependent Role="Section">
+        <PropertyRef Name="HospitalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaction_Pharmacy">
+    <End Role="Pharmacy" Type="DrPEDatabaseModel.Store.Pharmacy" Multiplicity="0..1" />
+    <End Role="Transaction" Type="DrPEDatabaseModel.Store.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pharmacy">
+        <PropertyRef Name="PharmacyID" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="PharmacyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaction_User">
+    <End Role="User" Type="DrPEDatabaseModel.Store.User" Multiplicity="1" />
+    <End Role="Transaction" Type="DrPEDatabaseModel.Store.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_User1">
+    <End Role="User" Type="DrPEDatabaseModel.Store.User" Multiplicity="0..1" />
+    <End Role="User1" Type="DrPEDatabaseModel.Store.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="EmergencyContactPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VerandaLonely_Section">
+    <End Role="Section" Type="DrPEDatabaseModel.Store.Section" Multiplicity="0..1" />
+    <End Role="VerandaLonely" Type="DrPEDatabaseModel.Store.VerandaLonely" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="SectionID" />
+      </Principal>
+      <Dependent Role="VerandaLonely">
+        <PropertyRef Name="SectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WareSense_Disease">
+    <End Role="Disease" Type="DrPEDatabaseModel.Store.Disease" Multiplicity="0..1" />
+    <End Role="WareSense" Type="DrPEDatabaseModel.Store.WareSense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disease">
+        <PropertyRef Name="DiseaseID" />
+      </Principal>
+      <Dependent Role="WareSense">
+        <PropertyRef Name="DiseaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
